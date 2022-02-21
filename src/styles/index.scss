@@ -7,9 +7,9 @@ html {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-areas: 
-  "navigation"
-  "main-content";
+  grid-template-areas:
+    "navigation"
+    "main-content";
 }
 
 header {
