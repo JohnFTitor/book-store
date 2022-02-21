@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &-parent {
+    padding: 30px;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+  }
+
+  li {
+    font-size: 4rem;
+    padding-right: 20px;
+  }
+  
+  a {
+    font-size: 3rem;
+  }
+}
+
+#login {
+  justify-self: end;
+}
