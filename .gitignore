@@ -23,6 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # linters
-.babelrc
 .eslintrc.json
 .stylelintrc.json
