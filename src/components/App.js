@@ -1,5 +1,7 @@
 import React from 'react';
-// import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Books from './Books';
+import Categories from './Categories';
 import Navigation from './Navigation';
 
 function App() {
@@ -7,7 +9,10 @@ function App() {
     <div className="App">
       <Navigation />
       <main>
-        <h1>Just to fill</h1>
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
       </main>
     </div>
   );

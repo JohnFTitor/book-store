@@ -1,0 +1,31 @@
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  33% {
+    left: 0;
+  }
+  66% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  
+  h1 {
+    position: relative;
+    left: -100%;
+    font-size: 5rem;
+    animation: 5s ease-in 0s infinite slide;
+  }
+}
