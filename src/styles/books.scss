@@ -1,0 +1,29 @@
+.books-page {
+  padding: 30px 60px;
+
+  button {
+    margin-top: 15px;
+    padding: 5px 10px;
+    border: 1px solid black;
+  }
+}
+
+.book {
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  
+  p {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+form {
+  display: flex;
+  gap: 30px;
+  align-items: baseline;
+}
