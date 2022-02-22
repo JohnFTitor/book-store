@@ -2,9 +2,9 @@
 
 # Book Store
 
-> Library project built using React and Redux.
+> This is a library project built using React with the main objective of learning how to use Redux with React. This is accomplished by holding a global state of the books displayed in the list, which are at the same time retrieved from an external API.
 
-Keep track of the books you've Read through this library React Webpage.
+Keep track of the books you've read through this library React Webpage. You can add them by writing their title and specifying their category. All the data will be displayed and sent to an external server. Share your books among all users!  
 
 ## Built With
 
