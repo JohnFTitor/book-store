@@ -1,0 +1,26 @@
+html {
+  font-size: 10px;
+}
+
+.App {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navigation"
+    "main-content";
+}
+
+header {
+  grid-area: navigation;
+}
+
+main {
+  grid-area: main-content;
+  overflow-y: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
