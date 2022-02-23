@@ -1,21 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+import { addBook } from '../redux/books/books';
 
-const AddBook = () => (
-  <form>
-    <label htmlFor="book-title">
-      <input id="book-title" name="bookTitle" type="text" placeholder="Book Title" />
-    </label>
-    <label htmlFor="category-select">
-      <select id="category-select" name="category">
-        <option disabled selected> Category </option>
-        <option value="fiction"> Fiction </option>
-        <option value="action"> Action </option>
-        <option value="suspense"> Suspense </option>
-        <option value="Romance"> Romance </option>
-      </select>
-    </label>
-    <button type="submit"> Add Book </button>
-  </form>
-);
+const AddBook = () => {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('Category');
+  const dispatch = useDispatch();
+
+  const onChangeHandler = (event) => {
+    const nodeName = event.target.name;
+    if (nodeName === 'bookTitle') {
+      setTitle(event.target.value);
+      return;
+    }
+    if (nodeName === 'bookAuthor') {
+      setAuthor(event.target.value);
+      return;
+    }
+    if (nodeName === 'category') {
+      setCategory(event.target.value);
+    }
+  };
+
+  const submitBook = (event) => {
+    event.preventDefault();
+    if (title.trim() !== '' && author.trim() !== '') {
+      const newBook = {
+        id: uuid(),
+        title: title.trim(),
+        author: author.trim(),
+        category,
+      };
+
+      dispatch(addBook(newBook));
+
+      setTitle('');
+      setAuthor('');
+      setCategory('Category');
+    }
+  };
+
+  return (
+    <form onSubmit={submitBook}>
+      <label htmlFor="book-title">
+        <input onChange={onChangeHandler} id="book-title" name="bookTitle" type="text" placeholder="Book Title" value={title} required />
+      </label>
+      <label htmlFor="book-author">
+        <input onChange={onChangeHandler} id="book-author" name="bookAuthor" type="text" placeholder="Author" value={author} required />
+      </label>
+      <label htmlFor="category-select">
+        <select onChange={onChangeHandler} id="category-select" name="category" value={category} required>
+          <option disabled> Category </option>
+          <option value="fiction"> Fiction </option>
+          <option value="action"> Action </option>
+          <option value="suspense"> Suspense </option>
+          <option value="Romance"> Romance </option>
+        </select>
+      </label>
+      <button type="submit"> Add Book </button>
+    </form>
+  );
+};
 
 export default AddBook;

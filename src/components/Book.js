@@ -1,16 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
-  const { title, category } = props;
+  const {
+    id,
+    title,
+    author,
+    category,
+  } = props;
+
+  const dispatch = useDispatch();
+
+  const removeSelf = () => {
+    dispatch(removeBook(id));
+  };
 
   return (
-    <li className="book">
+    <li id={id} className="book">
       <div className="info">
         <p>{category}</p>
         <h2>{title}</h2>
-        <p> Author </p>
-        <button type="button">
+        <p>{author}</p>
+        <button type="button" onClick={removeSelf}>
           Remove
         </button>
       </div>
@@ -19,8 +32,10 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
 };
 
 export default Book;
