@@ -35,6 +35,10 @@ const AddBook = () => {
       };
 
       dispatch(addBook(newBook));
+
+      setTitle('');
+      setAuthor('');
+      setCategory('Category');
     }
   };
 
