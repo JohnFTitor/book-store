@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('Category');
+  const dispatch = useDispatch();
 
   const onChangeHandler = (event) => {
     const nodeName = event.target.name;
@@ -20,8 +24,22 @@ const AddBook = () => {
     }
   };
 
+  const submitBook = (event) => {
+    event.preventDefault();
+    if (title.trim() !== '' && author.trim() !== '') {
+      const newBook = {
+        id: uuid(),
+        title: title.trim(),
+        author: author.trim(),
+        category,
+      };
+
+      dispatch(addBook(newBook));
+    }
+  };
+
   return (
-    <form>
+    <form onSubmit={submitBook}>
       <label htmlFor="book-title">
         <input onChange={onChangeHandler} id="book-title" name="bookTitle" type="text" placeholder="Book Title" value={title} required />
       </label>
@@ -30,7 +48,7 @@ const AddBook = () => {
       </label>
       <label htmlFor="category-select">
         <select onChange={onChangeHandler} id="category-select" name="category" value={category} required>
-          <option disabled selected> Category </option>
+          <option disabled> Category </option>
           <option value="fiction"> Fiction </option>
           <option value="action"> Action </option>
           <option value="suspense"> Suspense </option>

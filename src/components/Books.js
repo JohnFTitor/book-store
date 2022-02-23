@@ -12,9 +12,9 @@ const Books = () => {
   return (
     <div className="books-page">
       <ul className="books-container">
-        <Book title={test.title} category={test.category} />
-        <Book title={test.title} category={test.category} />
-        <Book title={test.title} category={test.category} />
+        <Book title={test.title} category={test.category} author="author" />
+        <Book title={test.title} category={test.category} author="author" />
+        <Book title={test.title} category={test.category} author="author" />
       </ul>
       <AddBook />
     </div>
