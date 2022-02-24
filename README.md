@@ -4,7 +4,7 @@
 
 > This is a library project built using React with the main objective of learning how to use Redux with React. This is accomplished by holding a global state of the books displayed in the list, which are at the same time retrieved from an external API.
 
-![Screenshot](./screenshot.png)
+![Preview](./preview.gif)
 
 Keep track of the books you've read through this library React Webpage. You can add them by writing their title and specifying their category. All the data will be displayed and sent to an external server. Share your books among all users!  
 
@@ -53,10 +53,6 @@ Linter Checks are automatically run with Github actions when there's a pull requ
 - GitHub: [@JohnFTitor](https://github.com/JohnFTitor)
 - Twitter: [@johnftitor](https://twitter.com/johnftitor)
 - LinkedIn: [Andres](https://www.linkedin.com/in/andresfelipe117/?locale=en_US)
-
-## Acknowledgments
-
-Here's a [link](https://github.com/arcanemutterings/random-quote-generator-api) to the API GitHub Repo from which I got the data for the quotes. Special thanks to the author!
 
 ## Show your support
 
