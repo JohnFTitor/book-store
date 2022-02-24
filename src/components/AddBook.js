@@ -57,7 +57,12 @@ const AddBook = () => {
           <option value="fiction"> Fiction </option>
           <option value="action"> Action </option>
           <option value="suspense"> Suspense </option>
-          <option value="Romance"> Romance </option>
+          <option value="romance"> Romance </option>
+          <option value="adventure"> Adventure </option>
+          <option value="sci-fi"> Science Fiction </option>
+          <option value="history"> History </option>
+          <option value="thriller"> Thriller </option>
+          <option value="physics"> Physics </option>
         </select>
       </label>
       <button type="submit"> Add Book </button>
