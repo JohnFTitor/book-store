@@ -5,21 +5,46 @@
   flex-wrap: wrap;
 
   &-parent {
-    padding: 30px;
-    border-bottom: 2px solid black;
+    padding: 4rem 11rem 4rem 12rem;
+    border-bottom: 2px solid #e8e8e8;
     justify-content: space-between;
   }
 
   li {
-    font-size: 4rem;
-    padding-right: 20px;
+    font-size: 3.8rem;
+    padding-right: 5rem;
   }
 
   a {
-    font-size: 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.9px;
+    opacity: 0.5;
   }
 }
 
 #login {
-  justify-self: end;
+  padding: 0;
+}
+
+#logo {
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.oval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: solid 1px #e8e8e8;
+
+  svg {
+    width: 50%;
+    margin-bottom: 5px;
+    color: 
+    #0290ff;
+  }
 }
