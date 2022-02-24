@@ -1,0 +1,67 @@
+.circular {
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 2rem;
+  position: relative;
+
+  .inner {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    height: 6.8rem;
+    width: 6.8rem;
+    background-color: white;
+    border-radius: 100%;
+    margin: -3.4rem 0 0 -3.4rem;
+  }
+
+  .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d3d3d3;
+    border-radius: 100%;
+    clip: rect(0, 8rem, 8rem, 4rem);
+  }
+}
+
+.circle {
+  .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0, 4rem, 8rem, 0);
+    background-color: #307bbe;
+    background: linear-gradient(#379cf6, #307bbe);
+  }
+
+  .left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+
+  .right {
+    transform: rotate(180deg);
+    z-index: 2;
+    
+    .progress {
+      background: linear-gradient(#307bbe, #379cf6);
+      animation: right 4s linear both;
+      animation-delay: 4s;
+    }
+  }
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
+}

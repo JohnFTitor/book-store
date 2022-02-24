@@ -2,12 +2,20 @@
   padding: 30px 60px;
 }
 
+.books-container {
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 3rem;
+}
+
 .book {
   padding: 4rem 2rem 3.5rem 2rem;
   margin-bottom: 10px;
   border: 1px solid #e8e8e8;
   background-color: #ffffff;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   p {
     font-size: 1.5rem;
