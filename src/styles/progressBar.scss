@@ -32,7 +32,7 @@
     width: 100%;
     border-radius: 100%;
     clip: rect(0, 4rem, 8rem, 0);
-    background-color: #307bbe;
+    background: #307bbe;
     background: linear-gradient(#379cf6, #307bbe);
   }
 
@@ -43,7 +43,7 @@
   .right {
     transform: rotate(180deg);
     z-index: 2;
-    
+
     .progress {
       background: linear-gradient(#307bbe, #379cf6);
     }
@@ -60,7 +60,7 @@
 
 .status-number {
   margin-left: 2rem;
-  
+
   .number {
     font-size: 3.5rem;
     margin-bottom: 5px;

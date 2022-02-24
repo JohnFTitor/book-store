@@ -12,7 +12,7 @@
   padding: 4rem 2rem 3.5rem 2rem;
   margin-bottom: 10px;
   border: 1px solid #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@
 
 .chapter-info {
   padding: 0 14rem 0 6rem;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 300;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@
   }
 
   button {
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab', sans-serif;
     font-weight: 300;
     color: white;
     text-transform: uppercase;
