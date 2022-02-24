@@ -24,6 +24,7 @@ const Books = () => {
       <ul className="books-container">
         {createBooks()}
       </ul>
+      <h1> Add New Book </h1>
       <AddBook />
     </div>
   );

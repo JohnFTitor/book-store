@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { addBookToAPI } from '../redux/books/books';
+import '../styles/addBook.scss';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('Category');
+  const [category, setCategory] = useState('Book');
   const dispatch = useDispatch();
 
   const onChangeHandler = (event) => {
@@ -38,25 +39,30 @@ const AddBook = () => {
 
       setTitle('');
       setAuthor('');
-      setCategory('Category');
+      setCategory('Book');
     }
   };
 
   return (
     <form onSubmit={submitBook}>
-      <label htmlFor="book-title">
+      <label className="input-text" htmlFor="book-title">
         <input onChange={onChangeHandler} id="book-title" name="bookTitle" type="text" placeholder="Book Title" value={title} required />
       </label>
-      <label htmlFor="book-author">
+      <label className="input-text" htmlFor="book-author">
         <input onChange={onChangeHandler} id="book-author" name="bookAuthor" type="text" placeholder="Author" value={author} required />
       </label>
       <label htmlFor="category-select">
         <select onChange={onChangeHandler} id="category-select" name="category" value={category} required>
-          <option disabled> Category </option>
+          <option disabled> Book </option>
           <option value="fiction"> Fiction </option>
           <option value="action"> Action </option>
           <option value="suspense"> Suspense </option>
-          <option value="Romance"> Romance </option>
+          <option value="romance"> Romance </option>
+          <option value="adventure"> Adventure </option>
+          <option value="sci-fi"> Science Fiction </option>
+          <option value="history"> History </option>
+          <option value="thriller"> Thriller </option>
+          <option value="physics"> Physics </option>
         </select>
       </label>
       <button type="submit"> Add Book </button>
