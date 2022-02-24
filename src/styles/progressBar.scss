@@ -54,6 +54,26 @@
   }
 }
 
+.chapter-progress {
+  display: flex;
+  align-items: center;
+}
+
+.status-number {
+  margin-left: 2rem;
+  padding-bottom: 2rem;
+  
+  .number {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+  }
+
+  .status {
+    color: #121212;
+    opacity: 0.5;
+  }
+}
+
 @keyframes left {
   100% {
     transform: rotate(180deg);

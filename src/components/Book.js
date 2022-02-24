@@ -13,6 +13,7 @@ const Book = (props) => {
   } = props;
 
   const dispatch = useDispatch();
+  const limit = Math.floor(Math.random() * 100);
 
   const removeSelf = () => {
     dispatch(deleteBook(id));
@@ -37,7 +38,7 @@ const Book = (props) => {
         </div>
       </div>
       <div className="chapter">
-        <ProgressBar />
+        <ProgressBar limit={limit} />
       </div>
     </li>
   );
