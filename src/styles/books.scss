@@ -1,17 +1,13 @@
 .books-page {
   padding: 30px 60px;
-
-  button {
-    margin-top: 15px;
-    padding: 5px 10px;
-    border: 1px solid black;
-  }
 }
 
 .book {
-  padding: 20px;
+  padding: 4rem 2rem 3.5rem 2rem;
   margin-bottom: 10px;
-  border: 1px solid black;
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+  border-radius: 5px;
 
   p {
     font-size: 1.5rem;
@@ -28,4 +24,38 @@ form {
   display: flex;
   gap: 30px;
   align-items: baseline;
+}
+
+.category {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.title {
+  color: #121212;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.text {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #4386bf;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  :first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 5px 15px;
+    border-left: 1px solid #e8e8e8;
+  }
 }
