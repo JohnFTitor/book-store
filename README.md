@@ -10,7 +10,7 @@ Keep track of the books you've read through this library React Webpage. You can 
 
 ## Live Version 
 
-[Netlify](https://jfbook-store.netlify.app)
+[Netlify](https://jfbook-store.netlify.app) <br/>
 [Heroku](https://jfbook-store.herokuapp.com/)
 
 ## Built With
