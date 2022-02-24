@@ -145,3 +145,7 @@ a {
   box-sizing: border-box;
   padding: 0;
 }
+
+input:focus-visible {
+  outline: none;
+}

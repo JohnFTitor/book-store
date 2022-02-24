@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  
+  input,
+  select {
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    background-color: white;
+  }
+
+  label {
+    flex: 2 1;
+  }
+
+  .input-text {
+    flex: 2.5 1;
+  }
+
+  button {
+    flex: 1.5 1;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    border-radius: 3px;
+  }
+}
+
+
+::placeholder {
+  color: #c4c4c4;
+}

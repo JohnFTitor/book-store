@@ -5,6 +5,7 @@
 .books-container {
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .book {
@@ -28,12 +29,6 @@
   }
 }
 
-form {
-  display: flex;
-  gap: 30px;
-  align-items: baseline;
-}
-
 .category {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -52,6 +47,7 @@ form {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #4386bf;
+  background-color: transparent;
   font-size: 1.5rem;
 }
 
@@ -95,7 +91,6 @@ form {
   }
 
   button {
-    background-color: #0290ff;
     font-family: 'Roboto Slab';
     font-weight: 300;
     color: white;
