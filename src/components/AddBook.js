@@ -39,7 +39,7 @@ const AddBook = () => {
 
       setTitle('');
       setAuthor('');
-      setCategory('Category');
+      setCategory('Book');
     }
   };
 

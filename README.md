@@ -6,7 +6,12 @@
 
 ![Preview](./preview.gif)
 
-Keep track of the books you've read through this library React Webpage. You can add them by writing their title and specifying their category. All the data will be displayed and sent to an external server. Share your books among all users!  
+Keep track of the books you've read through this library React Webpage. You can add them by writing their title and specifying their category. All the data will be displayed and sent to an external server. Share your books among all users! 
+
+## Live Version 
+
+[Netlify](https://jfbook-store.netlify.app)
+[Heroku](https://jfbook-store.herokuapp.com/)
 
 ## Built With
 
@@ -44,7 +49,12 @@ To work on the project, run ```npm start``` in your terminal to deploy a live ve
 
 ### Run linters checks
 
-Linter Checks are automatically run with Github actions when there's a pull request. If you want to run them locally, remember to have the config file in the root of the local project. 
+Linter Checks are automatically run with Github actions when there's a pull request. If you want to run them locally, remember to have the config file in the root of the local project.
+
+## Deployment
+
+Netlify is set to automatically deploy the production branch (main branch) of this project, so you don't need to worry about it.
+Heroku is manually deployed by our team whenever required. That is, when the main branch gets updated.
 
 ## Authors
 
