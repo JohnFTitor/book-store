@@ -25,3 +25,5 @@ yarn-error.log*
 # linters
 .eslintrc.json
 .stylelintrc.json
+# Local Netlify folder
+.netlify
