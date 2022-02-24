@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/books/books';
 import ProgressBar from './ProgressBar';
+import ChapterInfo from './ChapterInfo';
 
 const Book = (props) => {
   const {
@@ -39,6 +40,7 @@ const Book = (props) => {
       </div>
       <div className="chapter">
         <ProgressBar limit={limit} />
+        <ChapterInfo />
       </div>
     </li>
   );

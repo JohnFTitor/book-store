@@ -67,3 +67,40 @@ form {
     border-left: 1px solid #e8e8e8;
   }
 }
+
+.chapter {
+  display: flex;
+}
+
+.chapter-info {
+  padding: 0 14rem 0 6rem;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .position {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .chapter-name {
+    letter-spacing: -0.4px;
+    color: #121212;
+    font-size: 1.7rem;
+  }
+
+  button {
+    background-color: #0290ff;
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 1rem 4rem;
+  }
+}
