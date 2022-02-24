@@ -81,4 +81,22 @@ const getBooks = async (dispatch) => {
   }
 };
 
-export { addBookToAPI, getBooks };
+const deleteBook = (id) => (
+  async (dispatch) => {
+    const response = await fetch(`${baseURL}/books/${id}`, {
+      method: 'DELETE',
+      body: JSON.stringify({
+        item_id: id,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const message = await response.text();
+    if (message === 'The book was deleted successfully!') {
+      dispatch(removeBook(id));
+    }
+  }
+);
+
+export { addBookToAPI, getBooks, deleteBook };
