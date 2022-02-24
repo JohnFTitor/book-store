@@ -34,12 +34,15 @@ export { addBook, removeBook };
 
 // Thunks
 
-const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/h0Gj1F0sEdzy0nyuaEty';
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cSmPQN09DYwSfvKIgiXo';
 
 const addBookToAPI = (payload) => {
   const bodyObj = {
     item_id: payload.id,
-    title: payload.title,
+    title: {
+      bookTitle: payload.title,
+      bookAuthor: payload.author,
+    },
     category: payload.category,
   };
   return async (dispatch) => {
@@ -50,10 +53,32 @@ const addBookToAPI = (payload) => {
         'Content-Type': 'application/json',
       },
     });
-    if (response.status === 201) {
+    if (response.status === 201) { // Created
       dispatch(addBook(payload));
     }
   };
 };
 
-export { addBookToAPI };
+const getBooks = async (dispatch) => {
+  const response = await fetch(`${baseURL}/books`);
+  if (response.status === 200) { // There are books
+    const booksObject = await response.json();
+    const arrayOfBooks = Object.entries(booksObject);
+    arrayOfBooks.forEach((book) => {
+      const [id, value] = book;
+      const { title, category } = value[0];
+      const { bookTitle, bookAuthor } = title;
+
+      const newBook = {
+        id,
+        title: bookTitle,
+        author: bookAuthor,
+        category,
+      };
+
+      dispatch(addBook(newBook));
+    });
+  }
+};
+
+export { addBookToAPI, getBooks };
