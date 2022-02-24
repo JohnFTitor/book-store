@@ -31,3 +31,29 @@ const removeBook = (payload) => ({
 });
 
 export { addBook, removeBook };
+
+// Thunks
+
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/h0Gj1F0sEdzy0nyuaEty';
+
+const addBookToAPI = (payload) => {
+  const bodyObj = {
+    item_id: payload.id,
+    title: payload.title,
+    category: payload.category,
+  };
+  return async (dispatch) => {
+    const response = await fetch(`${baseURL}/books`, {
+      method: 'POST',
+      body: JSON.stringify(bodyObj),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.status === 201) {
+      dispatch(addBook(payload));
+    }
+  };
+};
+
+export { addBookToAPI };
