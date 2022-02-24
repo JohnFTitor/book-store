@@ -39,7 +39,6 @@
 
   .left .progress {
     z-index: 1;
-    animation: left 4s linear both;
   }
 
   .right {
@@ -48,8 +47,6 @@
     
     .progress {
       background: linear-gradient(#307bbe, #379cf6);
-      animation: right 4s linear both;
-      animation-delay: 4s;
     }
   }
 }
@@ -71,17 +68,5 @@
   .status {
     color: #121212;
     opacity: 0.5;
-  }
-}
-
-@keyframes left {
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes right {
-  100% {
-    transform: rotate(180deg);
   }
 }
