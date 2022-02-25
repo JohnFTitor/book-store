@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navigation"
+    "main-content";
+}
+
+header {
+  grid-area: navigation;
+}
+
+main {
+  grid-area: main-content;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+button {
+  background-color: #0290ff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #888;
+  margin-bottom: 2.5rem;
+}

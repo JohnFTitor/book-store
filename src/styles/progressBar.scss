@@ -1,0 +1,73 @@
+.circular {
+  height: 8rem;
+  width: 8rem;
+  position: relative;
+
+  .inner {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    height: 6.8rem;
+    width: 6.8rem;
+    background-color: white;
+    border-radius: 100%;
+    margin: -3.4rem 0 0 -3.4rem;
+  }
+
+  .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d3d3d3;
+    border-radius: 100%;
+    clip: rect(0, 8rem, 8rem, 4rem);
+  }
+}
+
+.circle {
+  .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0, 4rem, 8rem, 0);
+    background: #307bbe;
+    background: linear-gradient(#379cf6, #307bbe);
+  }
+
+  .left .progress {
+    z-index: 1;
+  }
+
+  .right {
+    transform: rotate(180deg);
+    z-index: 2;
+
+    .progress {
+      background: linear-gradient(#307bbe, #379cf6);
+    }
+  }
+}
+
+.chapter-progress {
+  display: flex;
+  align-items: center;
+  padding-right: 8rem;
+  border-right: 2px solid #e8e8e8;
+  margin: 1rem 0;
+}
+
+.status-number {
+  margin-left: 2rem;
+
+  .number {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+  }
+
+  .status {
+    color: #121212;
+    opacity: 0.5;
+  }
+}
